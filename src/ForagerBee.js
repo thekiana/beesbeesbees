@@ -1,3 +1,19 @@
-var ForagerBee = function() {
+var ForagerBee = function(value) {
+  Bee.call(this, value);
+  this.age = 10;
+  this.job = 'find pollen';
+  this.color = 'yellow';
+  this.canFly = true;
+  this.treasureChest = [];
 };
 
+ForagerBee.prototype.eat = function (value) {
+
+};
+
+ForagerBee.prototype.forage = function(treasure) {
+  this.treasureChest.push(treasure);
+};
+
+ForagerBee.prototype(Bee.prototype);
+ForagerBee.prototype.constructor = ForagerBee;
